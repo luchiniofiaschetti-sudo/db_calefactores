@@ -1,0 +1,37 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+<h3>Agregar Calefactor</h3>
+
+<section>
+    <form action="<?= BASE_URL ?>confirmar-agregar-calefactor" method="POST"> 
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="tipo">Tipo</label>
+        <input type="text" id="tipo" name="tipo" required>
+
+        <label for="potencia">Potencia (W)</label>
+        <input type="number" id="potencia" name="potencia" required>
+
+        <label for="peso">Peso (kg)</label>
+        <input type="number" step="0.01" id="peso" name="peso" required>
+
+        <label for="precio">Precio ($)</label>
+        <input type="number" step="0.01" id="precio" name="precio" required>
+
+        <label for="stock">Stock</label>
+        <input type="number" id="stock" name="stock" required>
+
+        <label for="id_modelo">Modelo</label>
+           <select name="id_modelo" id="id_modelo" required>
+                <?php foreach ($modelos as $m): ?>
+                    <option value="<?= $m->id_modelo ?>">
+                        <?= htmlspecialchars($m->nombre) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+             
+        <button type="submit">Agregar</button>
+        <a href="<?= BASE_URL ?>listar-calefactores">Cancelar</a>
+    </form>
+</section>
+<?php require_once __DIR__ . '/../footer.phtml' ?>

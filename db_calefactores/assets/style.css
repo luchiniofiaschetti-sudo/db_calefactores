@@ -1,0 +1,112 @@
+html {
+    height: 100%; /* Asegura que la raíz ocupe todo el alto */
+  }
+
+body {
+    min-height: 100vh;          /* vh = viewport height, 100 = toda la pantalla */
+    display: flex;              /* activa flexbox */
+    flex-direction: column;     /* apila header, main y footer en columna */
+    margin: 0;
+}
+
+main {
+    flex: 1;                    /* ocupa todo el espacio disponible */
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+
+header {
+    
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: aliceblue;
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+header nav a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 1rem; 
+    padding-left: 0;
+}
+
+
+/* inicio */
+.inicio {
+    background-color: rgb(172, 172, 247);
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+.descripcion-inicio {
+    background-color: rgb(206, 202, 202);
+    color: black;
+    padding: 1rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: auto; max-width: 800px;
+}
+
+.detalles-calefactor {
+    background-color: rgb(255, 229, 197);
+    padding: 1rem;
+}
+
+.detalles-calefactor h2 {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.detalles-calefactor .detalle {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.listar-calefactores {
+    background-color: rgb(255, 229, 197);
+    padding: 1rem;
+}
+
+.listar-calefactores .lista {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.listar-modelos {
+    background-color: rgb(255, 229, 197);
+    padding: 1rem;
+}
+
+.listar-modelos .listar-model {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;          
+}
+

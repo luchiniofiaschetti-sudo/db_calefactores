@@ -1,0 +1,11 @@
+<?php require_once  __DIR__ . '/header.phtml' ?>
+
+<div>
+    <h4>Error</h4>
+    <section>
+        <p><?= htmlspecialchars($err ?? 'Error inesperado, mensaje de error:') ?></p>
+        <a href="<?= BASE_URL ?>inicio">voler inicio</a>
+    </section>
+</div>
+
+<?php require_once __DIR__ . '/footer.phtml' ?>

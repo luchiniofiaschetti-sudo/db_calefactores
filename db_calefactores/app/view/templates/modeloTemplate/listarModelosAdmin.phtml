@@ -1,0 +1,39 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<h4>Lista Modelos</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id_modelo</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Categoria</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach($modelos as $m): ?>
+                <tr>
+                    <td><?php echo "$m->id_modelo" ?></td>
+                    <td><?php echo "$m->nombre "?></td>
+                    <td><?php echo "$m->descripcion"?></td>
+                    <td><?php echo "$m->categoria"?></td>
+                    <th>
+                        <img src="<?= BASE_URL . $m->imagen?>" alt="Imagen de <?= htmlspecialchars($m->nombre) ?>" width="60">
+                    </th>
+                    <td>
+                        <a href=" <?= BASE_URL ?>editar-modelo/<?php echo "$m->id_modelo"?>">Editar</a>
+                        <a href=" <?= BASE_URL ?>eliminar-modelo/<?php echo "$m->id_modelo"?>">Eliminar</a>
+                        <a href=" <?= BASE_URL ?>modelo/<?= $m->id_modelo?>">VerModelo</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>    
+        </tbody>
+    </table>
+
+    <a href="<?= BASE_URL ?>admin">Volver</a>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>

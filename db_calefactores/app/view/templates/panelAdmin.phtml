@@ -1,0 +1,23 @@
+<?php require_once __DIR__ . '/header.phtml' ?>
+
+<h2>Administracion de Producto</h2>
+    <h5>Bienvenido <?= $this->admin->nombre?></h5>
+<section>
+    <h4>Administrar Calefactores</h4>
+
+    <ul>
+        <li><a href="<?=BASE_URL?>listar-calefactores">Listar Calefactores</a></li>
+        <li><a href="<?=BASE_URL?>agregar-calefactor">Agregar Calefactor</a></li>
+    </ul>
+</section>
+
+<section>
+    <h4>Administrar Modelos</h4>
+
+    <ul>
+        <li><a href="<?=BASE_URL?>listar-modelos">Listar Modelos</a></li>
+        <li><a href="<?=BASE_URL?>agregar-modelo">Agregar Modelo</a></li>
+    </ul>
+</section>
+
+<?php require_once __DIR__ . '/footer.phtml' ?>

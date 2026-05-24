@@ -1,0 +1,21 @@
+<?php require_once __DIR__ . '/header.phtml' ?>
+
+<section class="formulario-login">
+
+    <h2>Iniciar Sesion</h2>
+
+        <form action="confirmarLogin" method="POST">
+
+            <label for="usuario">Nombre de Usuario</label>
+            <input type="text" name="usuario" id="usuario" required>
+
+            <label for="contraseña">contraseña</label>
+            <input type="password" name="contraseña" id="contraseña" required>
+
+            <button type="submit">Ingresar</button>
+
+        </form>
+        
+</section>
+
+<?php require_once __DIR__ . '/footer.phtml' ?>

@@ -1,0 +1,27 @@
+
+<?php require_once __DIR__ . '/header.phtml' ?>
+
+<section class="inicio">
+    <h2>Bienvenido al catalogo de Calefactores</h2>
+
+    <img src="<?= BASE_URL ?>assets/img/calefa.jpg" alt="calefa">
+
+    <article class="descripcion-inicio">
+        Parrafo  de los servicios y tipo de calefactores del sitio, o informacion 
+    </article>
+
+    <div class="contenedor-lista-modelos">
+         <h3>Modelos Disponibles</h3>
+            <ul>
+                <?php foreach($modelos as $m): ?>
+                    <li>
+                        <a href="<?= BASE_URL ?>modelo/<?= $m->id_modelo ?>">
+                            <?= htmlspecialchars($m->nombre) ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+    </div>
+</section>
+
+<?php require_once __DIR__ . '/footer.phtml' ?>

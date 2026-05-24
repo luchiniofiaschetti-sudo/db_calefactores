@@ -1,0 +1,18 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<div>
+    <h4>Seguro desea eliminar Calefactor?</h4>
+
+    <ul>
+        <li><?= htmlspecialchars($calefactor->nombre) ?></li>
+        <li><?= htmlspecialchars($calefactor->precio) ?></li>
+        <li><?= htmlspecialchars($calefactor->stock) ?></li>
+    </ul>
+
+    <section>
+        <a href="<?= BASE_URL ?>confirmar-eliminar-calefactor/<?= $calefactor->id_calefactor?>">si, eliminar</a>
+        <a href="<?= BASE_URL ?>listar-calefactores">cancelar</a>
+    </section>
+</div>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>

@@ -1,0 +1,21 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<section class="listar-modelos">
+    <h4>Lista de Modelos</h4>
+
+        <ul>
+            <?php foreach($modelos as $m): ?>
+                <li class="listar-model">
+                    <?php echo htmlspecialchars($m->nombre)?>
+                    <img src="<?= BASE_URL . $m->imagen ?>" alt="Imagen de <?= htmlspecialchars($m->nombre) ?>" width="120">
+                    <?php echo htmlspecialchars($m->categoria)?>
+                    <?= htmlspecialchars($m->descripcion)?>
+                    <a href="<?= BASE_URL ?>modelo/<?= $m->id_modelo ?>">
+                        Ver modelo</a>
+                </li>
+            <?php endforeach; ?>
+            <a href="<?= BASE_URL ?>inicio">Volver</a>
+        </ul>
+</section>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>

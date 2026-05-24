@@ -1,0 +1,40 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<h4>Lista Calefactores</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id_calefactor</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Potencia</th>
+                <th>Peso</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Modelo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach($calefactores as $m): ?>
+                <tr>
+                    <td><?php echo "$m->id_calefactor" ?></td>
+                    <td><?php echo "$m->nombre "?></td>
+                    <td><?php echo "$m->tipo"?></td>
+                    <td><?php echo "$m->potencia"?></td>
+                    <td><?php echo "$m->peso"?></td>
+                    <td><?php echo "$m->precio"?></td>
+                    <td><?php echo "$m->stock"?></td>
+                    <td><?php echo "$m->modeloNombre"?></td>
+                    <td>  
+                        <a href=" <?= BASE_URL ?>editar-calefactor/<?php echo "$m->id_calefactor"?>">Editar</a>
+                        <a href=" <?= BASE_URL ?>eliminar-calefactor/<?php echo "$m->id_calefactor"?>">Eliminar</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>    
+        </tbody>
+    </table>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>

@@ -1,0 +1,33 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<div>
+    <h3>Editar Modelo</h3>
+
+    <section>
+        <form action="<?= BASE_URL?>confirmar-edicion-modelo" method="POST">
+            <input type="hidden" name="id" value="<?= $modelo->id_modelo ?>">
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" value="<?php echo "$modelo->nombre"?>" required>
+
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion" value="<?= $modelo->descripcion ?>" required>
+
+            <label for="categoria">Categoria</label>
+            <input type="text" name="categoria" value="<?= $modelo->categoria ?>" required>
+            
+            <label for="imagen">Imagen actual:</label><br>
+            <img src="<?= BASE_URL . $modelo->imagen ?>" alt="Imagen actual" width="120"><br>
+
+            <label for="imagen">Cambiar imagen:</label>
+            <input type="file" name="imagen" accept="image/*">
+            
+            <button type="submit">Confirmar Edicion</button>
+            <a href="<?= BASE_URL ?>listar-modelos">Cancelar</a>
+        </form>
+        <a href="<?= BASE_URL ?>admin">Volver</a>
+    </section>
+</div>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>
+

@@ -1,0 +1,31 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+<h3>Editar Calefactor</h3>
+
+<section>
+    <form action="<?= BASE_URL ?>confirmar-editar-calefactor/<?=$calefactor->id_calefactor?>" method="POST">
+        <input type="hidden" name="id_calefactor" value="<?= htmlspecialchars($calefactor->id_calefactor) ?>">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="<?= htmlspecialchars($calefactor->nombre) ?>">
+
+        <label for="tipo">Tipo</label>
+        <input type="text" id="tipo" name="tipo" value="<?= htmlspecialchars($calefactor->tipo) ?>">
+
+        <label for="potencia">Potencia (W)</label>
+        <input type="number" id="potencia" name="potencia" value="<?= htmlspecialchars($calefactor->potencia) ?>">
+
+        <label for="peso">Peso (kg)</label>
+        <input type="number" step="0.01" id="peso" name="peso" value="<?= htmlspecialchars($calefactor->peso) ?>">
+
+        <label for="precio">Precio ($)</label>
+        <input type="number" step="0.01" id="precio" name="precio" value="<?= htmlspecialchars($calefactor->precio) ?>">
+
+        <label for="stock">Stock</label>
+        <input type="number" id="stock" name="stock" value="<?= htmlspecialchars($calefactor->stock) ?>">
+
+        <button type="submit">Guardar cambios</button>
+        <a href="<?= BASE_URL ?>listar-calefactores">Cancelar</a>
+    </form>
+</section>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>

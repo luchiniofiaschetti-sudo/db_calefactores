@@ -1,0 +1,16 @@
+<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<div>
+    <h4>Seguro desea Eliminar el siguiente modelo?</h4>
+    <ul>
+        <li> <?=htmlspecialchars($model->nombre)?> </li>
+        <li> <?=htmlspecialchars($model->descripcion)?> </li>
+        <li> <?=htmlspecialchars($model->categoria)?> </li>
+    </ul>
+    <section>
+        <a href="<?=BASE_URL?>confirmar-eliminacion-modelo/<?=$model->id_modelo?>">eliminar</a>
+        <a href="<?=BASE_URL?>listar-modelos">cancelar</a>
+    </section>
+</div>
+
+<?php require_once __DIR__ . '/../footer.phtml' ?>

@@ -1,0 +1,15 @@
+s<?php require_once __DIR__ . '/../header.phtml' ?>
+
+<div class = "detalles-calefactor">
+
+<h2>Detalle del Calefactor</h2>
+
+    <h3><?= htmlspecialchars($calefactor->nombre) ?></h3>
+    <p class="detalle">Tipo: <?= htmlspecialchars($calefactor->tipo) ?></p>
+    <p class="detalle">Precio: $<?= htmlspecialchars($calefactor->precio) ?></p>
+    <p class="detalle">Potencia: <?= htmlspecialchars($calefactor->potencia) ?> W</p>
+    <p class="detalle">Stock: <?= htmlspecialchars($calefactor->stock) ?></p>
+    <p class="detalle">Modelo: <?= htmlspecialchars($calefactor->modeloPropio->nombre) ?></p>
+    <a href="<?= BASE_URL ?>inicio">volver</a>
+</div>
+<?php require_once __DIR__ . '/../footer.phtml' ?>
