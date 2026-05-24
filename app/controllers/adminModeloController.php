@@ -7,11 +7,12 @@ require_once __DIR__ . '/../view/errorView.php';
 require_once __DIR__ . '/../view/calefactorVista.php';
 
 class AdminModeloController {
+    
     private $modelo;
-    private $error;
-    private $vista;
     private $modeloCalefactor;
+    private $vista;
     private $vistaCalefactor;
+    private $error;
   
     public function __construct() {
         $this->modelo = new AdminModeloModel();

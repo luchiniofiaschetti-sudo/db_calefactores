@@ -5,12 +5,12 @@ require_once __DIR__ . '/../models/modeloModel.php';
 require_once __DIR__ . '/../view/modeloVista.php';
 require_once __DIR__ . '/../view/calefactorVista.php';
 require_once __DIR__ . '/../view/errorView.php';
+
 class ModeloController {  
+
     private $modelo;
     private $calefactorModel;
-
     private $vista;
-    
     private $vistaCalefactor;
 
     private $error;

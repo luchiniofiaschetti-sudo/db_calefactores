@@ -94,13 +94,14 @@ $req = (new SessionMiddleware())->run($req);
          $login = new LoginController();
          $login->formLogin($req);
          break;    
-         
+
+         //Administrador
+
       case 'confirmarLogin':
          $confirmar = new LoginController();
          $confirmar->confirmarlogin();
          break;
          
-         //Administrador
       case 'confirmar-logout':
          $req = (new GuardMiddleWare())->run($req);
          $logout = new LogoutController();
